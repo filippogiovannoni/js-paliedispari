@@ -4,6 +4,63 @@ Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 */
 
+// Chiedo all'utente una parola con un prompt e la salvo in una variabile
+const userWord = prompt('Inserisci la tua parola e scopri se è palindroma');
+
+// Creo una variabile di appoggio per la sequenza di caratteri
+let userWordSequence = '';
+
+// Creo una variabile di appoggio per la sequenza di caratteri al contrario
+let userWordSequenceReverse = '';
+
+// Creo un ciclo for per avere una sequenza di caratteri della parola
+for (let i = 0; i < userWord.length; i++) {
+    
+    // Alla variabile vengono aggiunti i caratteri ad ogni iterazione
+    userWordSequence += userWord[i];
+
+     // Alla variabile vengono aggiunti i caratteri al contrario ad ogni iterazione
+    userWordSequenceReverse += userWord[userWord.length - i - 1];
+
+}
+
+// Se la parola inserita è uguale alla parola invertita
+if (userWordSequence === userWordSequenceReverse) {
+    
+    // Stampo in pagina un alert che annuncia che la parola è palindroma
+    alert(`La parola ${userWord} è palindroma!`);
+
+} else {
+
+    // Stampo in pagina un alert che annuncia che la parola non è palindroma
+    alert(`Mi dispiace, la parola ${userWord} non è palindroma!`);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
    
